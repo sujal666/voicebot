@@ -86,9 +86,7 @@ export default function VoiceBot() {
     utter.volume = 1.0
 
     // Add natural pauses between sentences
-    if (index > 0) {
-      utter.pause = true
-    }
+    // (To add pauses, you can insert empty utterances or adjust timing between speaks if needed)
     
     // Update caption when each utterance starts
     utter.onstart = () => {
