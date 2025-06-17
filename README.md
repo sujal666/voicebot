@@ -2,6 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 
 ![VoiceBot UI Preview](./voicebot.png)
+To use the voice bot, simply tap the mic, ask your question, and wait a few seconds for the response.
 
 ## Getting Started
 
