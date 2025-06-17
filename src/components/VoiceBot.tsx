@@ -11,7 +11,7 @@ export default function VoiceBot() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [utterances, setUtterances] = useState<SpeechSynthesisUtterance[]>([])
 
-  // @ts-ignore: SpeechRecognition is available in browser environments
+  // @ts-expect-error: SpeechRecognition is available in browser environments
     let recognition: typeof window.SpeechRecognition | typeof window.webkitSpeechRecognition | null = null
   const startRecognition = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
