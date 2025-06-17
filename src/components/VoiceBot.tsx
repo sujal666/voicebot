@@ -8,10 +8,12 @@ export default function VoiceBot() {
   const [isSpeaking, setIsSpeaking] = useState(false)
   const [spokenLines, setSpokenLines] = useState<string[]>([])
   const [currentLineIndex, setCurrentLineIndex] = useState(0)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [utterances, setUtterances] = useState<SpeechSynthesisUtterance[]>([])
 
   let recognition: SpeechRecognition | null = null
   const startRecognition = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const SpeechRecognition = (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition
     recognition = new SpeechRecognition()
     recognition.lang = 'en-US'
@@ -23,6 +25,7 @@ export default function VoiceBot() {
       setIsListening(false)
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     recognition.onresult = async (event: any) => {
       const userInput = event.results[0][0].transcript
       await getAIResponse(userInput)
@@ -117,7 +120,7 @@ export default function VoiceBot() {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-gray-900 text-white">
-      <h1 className="text-2xl font-semibold mb-4 text-blue-400">Sujal's Voice Bot</h1>
+      <h1 className="text-2xl font-semibold mb-4 text-blue-400">Sujal&apos;s Voice Bot</h1>
       <h1 className='text-sm font-semibold text-center mb-4'>Ask me about anything , my past internship experience,<br /> skills, abilities etc  this bot will speak behalf of myslef. </h1>
       <Button
         onClick={handleStart}
