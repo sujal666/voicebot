@@ -2,9 +2,23 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/voicebot-app.git
+cd voicebot-app
+```
+Create a .env file in the root directory of the project and add your OpenAI API key:
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+
+
+run the development server:
 
 ```bash
+npm install 
+
 npm run dev
 # or
 yarn dev
